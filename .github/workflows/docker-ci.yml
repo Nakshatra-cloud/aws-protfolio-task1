@@ -20,7 +20,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest .
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio-website:${{ github.run_number }} .
 
       - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-website:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-website:${{ github.run_number }}
