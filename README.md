@@ -1,3 +1,5 @@
+[![Docker CI Pipeline](https://github.com/Nakshatra-cloud/aws-protfolio-task1/actions/workflows/docker-ci.yml/badge.svg)](https://github.com/Nakshatra-cloud/aws-protfolio-task1/actions/workflows/docker-ci.yml)
+
 # Static Portfolio Website Hosted on AWS
 
 ## Project Overview
